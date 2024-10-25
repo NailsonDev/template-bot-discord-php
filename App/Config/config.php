@@ -5,10 +5,10 @@ namespace App\Config;
 define('prefix', '!');
 
 define('Owner', [
-  '381992356947165194'
+  'ID account'
 ]);
 
 define('Client', [
   'token' => '',
-  'id' => '717939610675576904',
+  'id' => 'ID BOT',
 ]);
