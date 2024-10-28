@@ -9,6 +9,6 @@ define('Owner', [
 ]);
 
 define('Client', [
-  'token' => '',
+  'token' => 'NzE3OTM5NjEwNjc1NTc2OTA0.GN7Ptq.zZbV7ZRGxKsVxGbSekz8FbseG6-_Vv2StKV53M',
   'id' => '717939610675576904',
 ]);

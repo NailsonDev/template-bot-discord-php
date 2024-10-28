@@ -8,6 +8,7 @@ use Discord\Parts\Channel\Message;
 use Discord\WebSockets\Intents;
 use Discord\WebSockets\Event;
 use App\Functions\prefix;
+use Discord\Parts\Interactions\Interaction;
 
 $discord = new Discord([
     'token' => Client['token'],
@@ -25,12 +26,12 @@ $discord->on(Event::MESSAGE_CREATE, function (Message $message, Discord $discord
     if ($message->author->bot) return;
     
     // Chama o método para verificar se é um comando
-    $response = Prefix::callCommand($message->content);
+    $response = Prefix::checkPrefix($message->content);
 
     if ($response && file_exists($response)) {
         include($response);
     } else {
-        echo $response; // comando não existe
+        $message->reply($response);
     }
 });
 
